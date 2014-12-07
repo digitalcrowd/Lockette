@@ -107,7 +107,7 @@ public class LockettePlayerListener implements Listener{
 				
 				// Check if it is our sign that is selected.
 				
-				if(text.equals("[private]") || text.equals("private")  || text.equals("\"private\") || text.equalsIgnoreCase(Lockette.altPrivate)) privateSign = true;
+				if(text.equals("[private]") || text.equals("private")  || text.equals("\"private\"") || text.equalsIgnoreCase(Lockette.altPrivate)) privateSign = true;
 				else if(text.equals("[more users]") || text.equalsIgnoreCase(Lockette.altMoreUsers)){
 					privateSign = false;
 					
@@ -396,7 +396,7 @@ public class LockettePlayerListener implements Listener{
 		
 		// Check if it is our sign that was clicked.
 		
-		if(text.equals("[private]") || text.equals("private")  || text.equals("\"private\") || text.equalsIgnoreCase(Lockette.altPrivate)){}
+		if(text.equals("[private]") || text.equals("private")  || text.equals("\"private\"") || text.equalsIgnoreCase(Lockette.altPrivate)){}
 		else if(text.equals("[more users]") || text.equalsIgnoreCase(Lockette.altMoreUsers)){
 			Block		checkBlock = Lockette.getSignAttachedBlock(block);
 			if(checkBlock == null) return;
