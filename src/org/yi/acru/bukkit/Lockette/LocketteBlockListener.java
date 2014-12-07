@@ -82,7 +82,7 @@ public class LocketteBlockListener implements Listener{
 			Sign		sign = (Sign) block.getState();
 			String		text = sign.getLine(0).replaceAll("(?i)\u00A7[0-F]", "").toLowerCase();
 			
-			if(text.equals("[private]") || text.equalsIgnoreCase(Lockette.altPrivate)){
+			if(text.equals("[private]") || text.equals("private")  || text.equals("\"private\"") || text.equalsIgnoreCase(Lockette.altPrivate)){
 				int			length = player.getName().length();
 				
 				if(length > 15) length = 15;
@@ -256,7 +256,7 @@ public class LocketteBlockListener implements Listener{
 			Sign		sign = (Sign) against.getState();
 			String		text = sign.getLine(0).replaceAll("(?i)\u00A7[0-F]", "").toLowerCase();
 			
-			if(text.equals("[private]") || text.equalsIgnoreCase(Lockette.altPrivate) || text.equals("[more users]") || text.equalsIgnoreCase(Lockette.altMoreUsers)){
+			if(text.equals("[private]") || text.equals("private")  || text.equals("\"private\"")  || text.equalsIgnoreCase(Lockette.altPrivate) || text.equals("[more users]") || text.equalsIgnoreCase(Lockette.altMoreUsers)){
 				event.setCancelled(true);
 				return;
 			}
@@ -534,7 +534,7 @@ public class LocketteBlockListener implements Listener{
 			Sign		sign = (Sign) block.getState();
 			String		text = sign.getLine(0).replaceAll("(?i)\u00A7[0-F]", "");
 			
-			if(text.equalsIgnoreCase("[Private]") || text.equalsIgnoreCase(Lockette.altPrivate) ||
+			if(text.equalsIgnoreCase("[Private]") || text.equals("private")  || text.equals("\"private\"")  || text.equalsIgnoreCase(Lockette.altPrivate) ||
 					text.equalsIgnoreCase("[More Users]") || text.equalsIgnoreCase(Lockette.altMoreUsers)){
 				//if(!sign.getLine(1).replaceAll("(?i)\u00A7[0-F]", "").isEmpty()){
 				// Need to set canceled to false and set event text, as the sign is cleared otherwise.
@@ -555,7 +555,7 @@ public class LocketteBlockListener implements Listener{
 			Sign		sign = (Sign) block.getState();
 			String		text = sign.getLine(0).replaceAll("(?i)\u00A7[0-F]", "");
 			
-			if(text.equalsIgnoreCase("[Private]") || text.equalsIgnoreCase(Lockette.altPrivate) ||
+			if(text.equalsIgnoreCase("[Private]") || text.equals("private")  || text.equals("\"private\"")  || text.equalsIgnoreCase(Lockette.altPrivate) ||
 					text.equalsIgnoreCase("[More Users]") || text.equalsIgnoreCase(Lockette.altMoreUsers)){
 				if(event.isCancelled()) return;
 				//event.setCancelled(true);
@@ -579,7 +579,7 @@ public class LocketteBlockListener implements Listener{
 			Sign		sign = (Sign) block.getState();
 			String		text = sign.getLine(0).replaceAll("(?i)\u00A7[0-F]", "").toLowerCase();
 			
-			if(text.equals("[private]") || text.equals(Lockette.altPrivate) || text.equals("[more users]") || text.equals(Lockette.altMoreUsers)){
+			if(text.equals("[private]") || text.equals("private")  || text.equals("\"private\"")  || text.equals(Lockette.altPrivate) || text.equals("[more users]") || text.equals(Lockette.altMoreUsers)){
 				sign.setLine(0, "");
 				sign.setLine(1, "");
 				sign.setLine(2, "");
@@ -606,7 +606,7 @@ public class LocketteBlockListener implements Listener{
 		
 		
 		
-		if(text.equalsIgnoreCase("[Private]") || text.equalsIgnoreCase(Lockette.altPrivate)){
+		if(text.equalsIgnoreCase("[Private]") || text.equals("private")  || text.equals("\"private\"")  || text.equalsIgnoreCase(Lockette.altPrivate)){
 			//Player		player = event.getPlayer();
 			//Block		block = event.getBlock();
 			//boolean		typeWallSign = (block.getTypeId() == Material.WALL_SIGN.getId());
