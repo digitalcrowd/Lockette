@@ -393,7 +393,7 @@ public class Lockette extends PluginCore{
 		// Load in the alternate sign strings.
 		
 		altPrivate = strings.getString("alternate-private-tag");
-		if((altPrivate == null) || altPrivate.isEmpty() || (original && altPrivate.equals("Privé"))){
+		if((altPrivate == null) || altPrivate.isEmpty() || (original && altPrivate.equals("PrivÃ©"))){
 			altPrivate = "Private";
 			strings.set("alternate-private-tag", altPrivate);
 		}
@@ -416,7 +416,7 @@ public class Lockette extends PluginCore{
 		altEveryone = "["+altEveryone+"]";
 		
 		altOperators = strings.getString("alternate-operators-tag");
-		if((altOperators == null) || altOperators.isEmpty() || (original && altOperators.equals("Opérateurs"))){
+		if((altOperators == null) || altOperators.isEmpty() || (original && altOperators.equals("OpÃ©rateurs"))){
 			altOperators = "Operators";
 			strings.set("alternate-operators-tag", altOperators);
 			stringChanged = true;
@@ -673,7 +673,7 @@ public class Lockette extends PluginCore{
 			Sign		sign = (Sign) block.getState();
 			String		text = sign.getLine(0).replaceAll("(?i)\u00A7[0-F]", "").toLowerCase();
 			
-			if(text.equals("[private]") || text.equalsIgnoreCase(altPrivate)){
+			if(text.equalsIgnoreCase("[private]") || text.equalsIgnoreCase("private") || text.equalsIgnoreCase("\"private\"") || text.equalsIgnoreCase(altPrivate)){
 				return(true);
 			}
 			else if(text.equals("[more users]") || text.equalsIgnoreCase(altMoreUsers)){
@@ -699,7 +699,7 @@ public class Lockette extends PluginCore{
 			Sign		sign = (Sign) block.getState();
 			String		text = sign.getLine(0).replaceAll("(?i)\u00A7[0-F]", "").toLowerCase();
 			
-			if(text.equals("[private]") || text.equalsIgnoreCase(altPrivate)){
+			if(text.equalsIgnoreCase("[private]") || text.equalsIgnoreCase("private") || text.equalsIgnoreCase("\"private\"") || text.equalsIgnoreCase(altPrivate)){
 				return(sign.getLine(1).replaceAll("(?i)\u00A7[0-F]", ""));
 			}
 			else if(text.equals("[more users]") || text.equalsIgnoreCase(altMoreUsers)){
@@ -1186,7 +1186,7 @@ public class Lockette extends PluginCore{
 					Sign		sign = (Sign) checkBlock.getState();
 					String		text = sign.getLine(0).replaceAll("(?i)\u00A7[0-F]", "").toLowerCase();
 					
-					if(text.equals("[private]") || text.equalsIgnoreCase(altPrivate)) return(checkBlock);
+					if(text.equalsIgnoreCase("[private]") || text.equalsIgnoreCase("private") || text.equalsIgnoreCase("\"private\"") || text.equalsIgnoreCase(altPrivate)) return(checkBlock);
 				}
 			}
 		}
@@ -1209,7 +1209,7 @@ public class Lockette extends PluginCore{
 					Sign		sign = (Sign) checkBlock.getState();
 					String		text = sign.getLine(0).replaceAll("(?i)\u00A7[0-F]", "").toLowerCase();
 					
-					if(text.equals("[private]") || text.equalsIgnoreCase(altPrivate)) return(checkBlock);
+					if(text.equalsIgnoreCase("[private]") || text.equalsIgnoreCase("private") || text.equalsIgnoreCase("\"private\"") || text.equalsIgnoreCase(altPrivate)) return(checkBlock);
 				}
 			}
 		}
@@ -1232,7 +1232,7 @@ public class Lockette extends PluginCore{
 					Sign		sign = (Sign) checkBlock.getState();
 					String		text = sign.getLine(0).replaceAll("(?i)\u00A7[0-F]", "").toLowerCase();
 					
-					if(text.equals("[private]") || text.equalsIgnoreCase(altPrivate)) return(checkBlock);
+					if(text.equalsIgnoreCase("[private]") || text.equalsIgnoreCase("private") || text.equalsIgnoreCase("\"private\"") || text.equalsIgnoreCase(altPrivate)) return(checkBlock);
 				}
 			}
 		}
@@ -1255,7 +1255,7 @@ public class Lockette extends PluginCore{
 					Sign		sign = (Sign) checkBlock.getState();
 					String		text = sign.getLine(0).replaceAll("(?i)\u00A7[0-F]", "").toLowerCase();
 					
-					if(text.equals("[private]") || text.equalsIgnoreCase(altPrivate)) return(checkBlock);
+					if(text.equalsIgnoreCase("[private]") || text.equalsIgnoreCase("private") || text.equalsIgnoreCase("\"private\"") || text.equalsIgnoreCase(altPrivate)) return(checkBlock);
 				}
 			}
 		}
