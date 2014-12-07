@@ -59,7 +59,7 @@ public class LockettePrefixListener implements Listener{
 			Sign		sign = (Sign) block.getState();
 			String		text = sign.getLine(0).replaceAll("(?i)\u00A7[0-F]", "");
 			
-			if(text.equalsIgnoreCase("[Private]") || text.equalsIgnoreCase(Lockette.altPrivate) ||
+			if(text.equalsIgnoreCase("[Private]") || text.equalsIgnoreCase("private")  || text.equalsIgnoreCase("\"private\"")  || text.equalsIgnoreCase(Lockette.altPrivate) ||
 					text.equalsIgnoreCase("[More Users]") || text.equalsIgnoreCase(Lockette.altMoreUsers)){
 				// Okay, sign already exists and someone managed to send an event to replace.
 				// Cancel it!  Also, set event text to sign text, just in case.
@@ -92,7 +92,7 @@ public class LockettePrefixListener implements Listener{
 			Sign		sign = (Sign) block.getState();
 			String		text = sign.getLine(0).replaceAll("(?i)\u00A7[0-F]", "").toLowerCase();
 			
-			if(text.equals("[private]") || text.equals(Lockette.altPrivate) || text.equals("[more users]") || text.equals(Lockette.altMoreUsers)){
+			if(text.equals("[private]") || text.equalsIgnoreCase("private")  || text.equalsIgnoreCase("\"private\"")   || text.equals(Lockette.altPrivate) || text.equals("[more users]") || text.equals(Lockette.altMoreUsers)){
 				sign.setLine(0, "");
 				sign.setLine(1, "");
 				sign.setLine(2, "");
